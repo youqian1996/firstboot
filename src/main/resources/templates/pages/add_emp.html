@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+        <!--script type="text/javascript" th:src="@{/js/index.js}"></script-->
+        <title>SpringBoot模板学习</title>
+    </head>
+    <body>
+        <p1>Hello world !</p1>
+        <!--form action="/emp/upload" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>上传文件</legend>
+                姓名：<input type="text" name="name"/><br/><br/>
+                身份证正面：<input type="file" name="photo"/><br/><br/>
+                身份证反面：<input type="file" name="photo"/><br/><br/>
+                <input type="submit" value="提交"/><br/><br/>
+                <input type="reset" value="重置"/>
+            </fieldset>
+        </form>
+        <p th:text="'    www.baidu.com   '"></p>
+        <p th:text="${#strings.trim('    www.baidu.com   ')}"></p>
+        <p th:replace="@{/pages/footer}::student" th:with="name=张三"></p>
+        <p th:include="@{/pages/footer}::student" th:with="name=李四"></p-->
+
+        <!--table border="1">
+            <tr>
+                <th>序号</th><th>部门</th><th>编号</th><th>姓名</th><th>年龄</th>
+                <th>邮箱</th><th>薪资</th><th>入职日期</th><th>奇数</th><th>偶数</th>
+            </tr>
+            <tr th:each="emp,index:${empMap}">
+                <td th:text="${index.index}"></td>
+                <td th:text="${emp.key}"></td>
+                <td th:text="${emp.value.getEid()}"></td>
+                <td th:text="${emp.value.getName()}"></td>
+                <td th:text="${emp.value.getAge()}"></td>
+                <td th:text="${emp.value.getEmail()}"></td>
+                <td th:text="${emp.value.getSal()}"></td>
+                <td th:text="${#dates.format(emp.value.getHiredate(),'yyyy-MM-dd')}"></td>
+                <td th:text="${index.odd}"></td>
+                <td th:text="${index.even}"></td>
+            </tr>
+        </table-->
+
+        <!--form action="/emp/add" method="post">
+            <fieldset>
+                <legend>添加雇员</legend>
+                编号:<input type="text" name="eid" value="1001" th:text="${eid}"/><br/>
+                <br/>
+                姓名:<input type="text" name="name" value="张三" th:text="${name}"/><br/>
+                <br/>
+                年龄:<input type="text" name="age" value="18" th:text="${age}"/><br/>
+                <br/>
+                邮箱:<input type="text" name="email" value="110@163.com" th:text="${email}"/><br/>
+                <br/>
+                薪资:<input type="text" name="sal" value="10000.90" th:text="${sal}"/><br/>
+                <br/>
+                日期:<input type="text" name="hiredate" value="2017-09-09" th:text="${hiredate}"/><br/>
+                <br/>
+                <input type="reset" value="重置"/>
+                <input type="submit" value="提交"/>
+            </fieldset>
+        </form-->
+    </body>
+</html>
